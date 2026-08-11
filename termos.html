@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de Serviço — Plataforma de Automação para Afiliados</title>
+<style>
+  :root {
+    --bg: #EDEFEA;
+    --surface: #F7F8F4;
+    --ink: #1C1E1B;
+    --muted: #5C6358;
+    --accent: #3B6E5E;
+    --line: #D8DBD3;
+    --mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+    --serif: Iowan Old Style, "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141713; --surface: #191C16; --ink: #E9ECE4; --muted: #97A08D;
+      --accent: #74C4A4; --line: #262922;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141713; --surface: #191C16; --ink: #E9ECE4; --muted: #97A08D;
+    --accent: #74C4A4; --line: #262922;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); }
+  body {
+    color: var(--ink);
+    font-family: var(--sans);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+    line-height: 1.65;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.7rem, 4vw, 2.15rem);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 0.4rem;
+  }
+  .meta {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.82rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+    margin-bottom: 2.6rem;
+  }
+  section { margin-bottom: 2.3rem; }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin: 0 0 0.7rem;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  p, li { color: var(--ink); }
+  p { margin: 0 0 0.8rem; }
+  ul { margin: 0.6rem 0 0.8rem; padding-left: 1.3rem; }
+  li { margin-bottom: 0.5rem; }
+  a { color: var(--accent); }
+  code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.05em 0.4em;
+  }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<p class="eyebrow"><span class="dot"></span>Documento legal · single-tenant</p>
+<h1>Termos de Serviço</h1>
+<p class="meta">Plataforma de Automação para Afiliados — atualizado em 11 ago 2026</p>
+
+<section>
+  <h2><span class="num">01</span>O que é a Plataforma</h2>
+  <p>Esta aplicação ("a Plataforma") é uma ferramenta pessoal de automação de marketing de
+  afiliados, desenvolvida e operada por um único usuário para uso próprio. Ela conecta uma
+  conta de afiliado Shopee e uma conta TikTok para gerar e publicar vídeos curtos divulgando
+  produtos de afiliados.</p>
+</section>
+
+<section>
+  <h2><span class="num">02</span>Uso</h2>
+  <p>A Plataforma é de uso individual (single-tenant) e não é oferecida como serviço público
+  a terceiros. Não há cadastro aberto de novos usuários.</p>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Conexão com contas de terceiros</h2>
+  <p>Ao conectar sua conta TikTok via OAuth, você autoriza a Plataforma a:</p>
+  <ul>
+    <li>Ler informações básicas do perfil (nome e avatar), para confirmar qual conta está
+    vinculada;</li>
+    <li>Publicar vídeos em seu nome na TikTok, via TikTok Content Posting API,
+    exclusivamente mediante ação manual de aprovação feita por você no painel.</li>
+  </ul>
+  <p>Nenhuma publicação é feita automaticamente ou sem revisão humana prévia. Você pode
+  revogar essa autorização a qualquer momento, tanto pelas configurações da sua conta TikTok
+  quanto desconectando a integração dentro da Plataforma.</p>
+</section>
+
+<section>
+  <h2><span class="num">04</span>Conformidade</h2>
+  <p>Vídeos publicados respeitam as políticas da TikTok Content Posting API e os termos do
+  programa de afiliados Shopee, incluindo a exigência de disclosure de publicidade (ex:
+  <code>#publi</code>) e a proibição do uso de marca/logo Shopee nos vídeos.</p>
+</section>
+
+<section>
+  <h2><span class="num">05</span>Isenção de responsabilidade</h2>
+  <p>A Plataforma é fornecida "como está", sem garantias, para uso pessoal do operador. Não
+  há suporte comercial ou SLA associado.</p>
+</section>
+
+<footer>
+  <span>Plataforma de Automação para Afiliados</span>
+  <a href="mailto:larissapaulinocosta@gmail.com">larissapaulinocosta@gmail.com</a>
+</footer>
+</body>
+</html>
