@@ -134,12 +134,13 @@
 
 <p class="eyebrow"><span class="dot"></span>Documento legal · single-tenant</p>
 <h1>Política de Privacidade</h1>
-<p class="meta">Plataforma de Automação para Afiliados — atualizado em 11 ago 2026</p>
+<p class="meta">Plataforma de Automação para Afiliados — atualizado em 1 set 2026</p>
 
 <section>
   <p>Esta Plataforma é uma ferramenta pessoal de automação de marketing de afiliados,
   operada por um único usuário (single-tenant). Esta política descreve quais dados são
-  tratados quando você conecta sua conta TikTok.</p>
+  tratados quando você conecta sua conta do Facebook (Página), Instagram, Pinterest ou um
+  canal do Telegram.</p>
 </section>
 
 <section>
@@ -147,22 +148,43 @@
   <div class="tablewrap">
     <table>
       <thead>
-        <tr><th>Escopo TikTok</th><th>Dado</th><th>Uso</th></tr>
+        <tr><th>Escopo</th><th>Dado</th><th>Uso</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><code>user.info.basic</code></td>
-          <td>Nome de exibição, imagem de avatar</td>
-          <td>Exibir no painel qual conta está vinculada</td>
+          <td><code>pages_show_list</code>, <code>pages_read_engagement</code></td>
+          <td>Lista de Páginas administradas, nome da Página</td>
+          <td>Exibir no painel qual Página está vinculada</td>
         </tr>
         <tr>
-          <td><code>video.publish</code></td>
+          <td><code>pages_manage_posts</code></td>
           <td>Nenhum dado é lido</td>
-          <td>Enviar (publicar) vídeos em seu nome, após aprovação manual</td>
+          <td>Publicar posts (foto + legenda) em nome da Página, após aprovação manual</td>
+        </tr>
+        <tr>
+          <td><code>instagram_basic</code></td>
+          <td>Nome de usuário e ID da conta comercial do Instagram vinculada à Página</td>
+          <td>Exibir no painel qual conta do Instagram está vinculada</td>
+        </tr>
+        <tr>
+          <td><code>instagram_content_publish</code></td>
+          <td>Nenhum dado é lido</td>
+          <td>Publicar posts (foto + legenda) na conta do Instagram vinculada, após aprovação manual</td>
+        </tr>
+        <tr>
+          <td>Pinterest — <code>boards:read</code>, <code>pins:write</code></td>
+          <td>Lista de boards, nome do board</td>
+          <td>Publicar pins (imagem + legenda) no board conectado, após aprovação manual</td>
+        </tr>
+        <tr>
+          <td>Telegram Bot API</td>
+          <td>Nome/id do canal conectado</td>
+          <td>Publicar posts (foto(s) + legenda) no canal, após aprovação manual — o token do
+          bot é gerado e colado manualmente pelo operador (@BotFather), sem fluxo OAuth</td>
         </tr>
         <tr>
           <td>—</td>
-          <td>Access / refresh token</td>
+          <td>Access / refresh token (ou token do bot, no caso do Telegram)</td>
           <td>Armazenados criptografados, usados só para autenticar as publicações</td>
         </tr>
       </tbody>
@@ -172,17 +194,18 @@
 
 <section>
   <h2><span class="num">02</span>Como os dados são usados</h2>
-  <p>Os dados acima são usados exclusivamente para permitir a publicação de vídeos de
-  divulgação de produtos de afiliados na conta TikTok do próprio operador. Não usamos os
-  dados para anúncios, perfilamento, revenda ou qualquer finalidade além da operação da
-  própria Plataforma.</p>
+  <p>Os dados acima são usados exclusivamente para permitir a publicação de posts (foto +
+  legenda) de divulgação de produtos de afiliados nas contas conectadas do próprio operador.
+  Não usamos os dados para anúncios, perfilamento, revenda ou qualquer finalidade além da
+  operação da própria Plataforma.</p>
 </section>
 
 <section>
   <h2><span class="num">03</span>Compartilhamento com terceiros</h2>
   <p>Não compartilhamos, vendemos ou cedemos dados a terceiros. Os dados trafegam apenas
-  entre a Plataforma e as APIs oficiais da TikTok e da Shopee, estritamente para executar as
-  ações solicitadas pelo operador (publicar vídeo, ler produtos de afiliado).</p>
+  entre a Plataforma e as APIs oficiais do Facebook, do Instagram, do Pinterest, do Telegram
+  e da Shopee, estritamente para executar as ações solicitadas pelo operador (publicar post,
+  ler produtos de afiliado).</p>
 </section>
 
 <section>
@@ -192,11 +215,15 @@
   públicas.</p>
 </section>
 
-<section>
-  <h2><span class="num">05</span>Retenção e exclusão</h2>
-  <p>Você pode revogar o acesso da Plataforma à sua conta TikTok a qualquer momento nas
-  configurações de apps conectados da própria TikTok, ou desconectando a integração dentro
-  do painel da Plataforma — isso invalida e remove os tokens armazenados.</p>
+<section id="exclusao">
+  <h2><span class="num">05</span>Retenção e exclusão de dados</h2>
+  <p>Você pode revogar o acesso da Plataforma à sua conta do Facebook, Instagram, Pinterest ou
+  ao canal do Telegram a qualquer momento nas configurações de apps conectados de cada rede
+  (no Telegram, removendo o bot como admin do canal), ou desconectando a integração dentro do
+  painel da Plataforma — isso invalida e remove os tokens armazenados.
+  Para solicitar a exclusão completa de qualquer dado retido (tokens, nome da Página/conta
+  vinculada), envie um e-mail para o contato ao final desta página; a exclusão é feita em até
+  7 dias.</p>
 </section>
 
 <footer>
