@@ -77,8 +77,8 @@
 </div>
 
 <div class="tabs" id="tabs">
+  <div class="tab" data-categoria="todos">Todos</div>
   <div class="tab" data-categoria="organizacao">Organização</div>
-  <div class="tab" data-categoria="banheiro">Banheiro</div>
   <div class="tab" data-categoria="quarto">Cama & Quarto</div>
 </div>
 
@@ -86,14 +86,13 @@
   <a class="card" href="https://s.shopee.com.br/4fvso8HWak" target="_blank" rel="noopener sponsored" data-codigo="143" data-categoria="organizacao"><img src="https://cf.shopee.com.br/file/br-11134207-820lt-mlbxfpy0rzesbc" alt=""><span class="info"><span class="nome">Conjunto de 2/4 Caixas Organizadoras com Gaveta Cesta de Armazenamento para Roupas</span><span class="preco">R$ 39,99 &middot; cód. 143</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/2BEXwM5trl" target="_blank" rel="noopener sponsored" data-codigo="329" data-categoria="quarto"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdy7-m0os7gkj6b1hc4" alt=""><span class="info"><span class="nome">Porta Joia Acrílico Luxo Com 3 Camadas Brinco Anel Compartimento caixa de armazenamento de jóias</span><span class="preco">R$ 37,98 &middot; cód. 329</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/8fS1ZU6yMD" target="_blank" rel="noopener sponsored" data-codigo="288" data-categoria="organizacao"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdyn-mcly4l7rv8af44" alt=""><span class="info"><span class="nome">Cesto Organizador Multiuso Dobrável–Impermeável, Compacto e Resistente – Ideal para Roupa Suja, Brinquedos e Mais | 40L</span><span class="preco">R$ 23,92 &middot; cód. 288</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
-  <a class="card" href="https://s.shopee.com.br/5VUxxVZftE" target="_blank" rel="noopener sponsored" data-codigo="271" data-categoria="banheiro"><img src="https://cf.shopee.com.br/file/br-11134201-820l7-mqx5mt9mgz5xbd" alt=""><span class="info"><span class="nome">Suporte Organizador de Banheiro Multifuncional - Papel Higiênico e Lenços BEGE</span><span class="preco">R$ 37,90 &middot; cód. 271</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
 </nav>
 <p class="vazio" id="sem-resultado" style="display: none;">Nenhum produto encontrado com esse código.</p>
 
 <footer>Achadinhos da Shopee</footer>
 
 <script>
-  var categoriaAtiva = "organizacao";
+  var categoriaAtiva = "todos";
   var campo = document.getElementById("busca");
   var tabs = document.getElementById("tabs");
   var cartoes = document.querySelectorAll("#produtos a[data-codigo]");
@@ -106,7 +105,7 @@
     cartoes.forEach(function (cartao) {
       var mostra = buscando
         ? cartao.getAttribute("data-codigo").indexOf(termo) !== -1
-        : cartao.getAttribute("data-categoria") === categoriaAtiva;
+        : categoriaAtiva === "todos" || cartao.getAttribute("data-categoria") === categoriaAtiva;
       cartao.style.display = mostra ? "flex" : "none";
       if (mostra) algumVisivel = true;
     });
