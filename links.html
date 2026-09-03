@@ -34,14 +34,6 @@
     position: absolute; left: 0.95rem; top: 50%; transform: translateY(-50%);
     color: #C77FE0; pointer-events: none; display: flex;
   }
-  .tabs { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.1rem 0.1rem 0.4rem; margin-bottom: 1.5rem; }
-  .tabs::-webkit-scrollbar { display: none; }
-  .tab {
-    flex-shrink: 0; border: 1.5px solid #E4C6F0; background: #FFFFFF; color: #7A4A93;
-    font-weight: 600; font-size: 0.78rem; padding: 0.5rem 1rem; border-radius: 999px;
-    white-space: nowrap; cursor: pointer;
-  }
-  .tab-ativa { background: #E056C9; border-color: #E056C9; color: #FFFFFF; }
   .vazio { text-align: center; color: #F7EAFF; font-size: 0.85rem; margin: 1rem 0; }
   nav { display: flex; flex-direction: column; gap: 0.9rem; }
   nav a.card {
@@ -76,55 +68,32 @@
   </span>
 </div>
 
-<div class="tabs" id="tabs">
-  <div class="tab" data-categoria="todos">Todos</div>
-  <div class="tab" data-categoria="organizacao">Organização</div>
-  <div class="tab" data-categoria="quarto">Cama & Quarto</div>
-</div>
-
 <nav id="produtos">
-  <a class="card" href="https://s.shopee.com.br/4fvso8HWak" target="_blank" rel="noopener sponsored" data-codigo="143" data-categoria="organizacao"><img src="https://cf.shopee.com.br/file/br-11134207-820lt-mlbxfpy0rzesbc" alt=""><span class="info"><span class="nome">Conjunto de 2/4 Caixas Organizadoras com Gaveta Cesta de Armazenamento para Roupas</span><span class="preco">R$ 39,99 &middot; cód. 143</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
-  <a class="card" href="https://s.shopee.com.br/2BEXwM5trl" target="_blank" rel="noopener sponsored" data-codigo="329" data-categoria="quarto"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdy7-m0os7gkj6b1hc4" alt=""><span class="info"><span class="nome">Porta Joia Acrílico Luxo Com 3 Camadas Brinco Anel Compartimento caixa de armazenamento de jóias</span><span class="preco">R$ 37,98 &middot; cód. 329</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
-  <a class="card" href="https://s.shopee.com.br/8fS1ZU6yMD" target="_blank" rel="noopener sponsored" data-codigo="288" data-categoria="organizacao"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdyn-mcly4l7rv8af44" alt=""><span class="info"><span class="nome">Cesto Organizador Multiuso Dobrável–Impermeável, Compacto e Resistente – Ideal para Roupa Suja, Brinquedos e Mais | 40L</span><span class="preco">R$ 23,92 &middot; cód. 288</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
+  <a class="card" href="https://s.shopee.com.br/4fvso8HWak" target="_blank" rel="noopener sponsored" data-codigo="143"><img src="https://cf.shopee.com.br/file/br-11134207-820lt-mlbxfpy0rzesbc" alt=""><span class="info"><span class="nome">Conjunto de 2/4 Caixas Organizadoras com Gaveta Cesta de Armazenamento para Roupas</span><span class="preco">R$ 39,99 &middot; cód. 143</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
+  <a class="card" href="https://s.shopee.com.br/2BEXwM5trl" target="_blank" rel="noopener sponsored" data-codigo="329"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdy7-m0os7gkj6b1hc4" alt=""><span class="info"><span class="nome">Porta Joia Acrílico Luxo Com 3 Camadas Brinco Anel Compartimento caixa de armazenamento de jóias</span><span class="preco">R$ 37,98 &middot; cód. 329</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
+  <a class="card" href="https://s.shopee.com.br/8fS1ZU6yMD" target="_blank" rel="noopener sponsored" data-codigo="288"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdyn-mcly4l7rv8af44" alt=""><span class="info"><span class="nome">Cesto Organizador Multiuso Dobrável–Impermeável, Compacto e Resistente – Ideal para Roupa Suja, Brinquedos e Mais | 40L</span><span class="preco">R$ 23,92 &middot; cód. 288</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
 </nav>
 <p class="vazio" id="sem-resultado" style="display: none;">Nenhum produto encontrado com esse código.</p>
 
 <footer>Achadinhos da Shopee</footer>
 
 <script>
-  var categoriaAtiva = "todos";
   var campo = document.getElementById("busca");
-  var tabs = document.getElementById("tabs");
   var cartoes = document.querySelectorAll("#produtos a[data-codigo]");
   var semResultado = document.getElementById("sem-resultado");
 
   function aplicarFiltro() {
     var termo = campo.value.trim();
-    var buscando = termo !== "";
     var algumVisivel = false;
     cartoes.forEach(function (cartao) {
-      var mostra = buscando
-        ? cartao.getAttribute("data-codigo").indexOf(termo) !== -1
-        : categoriaAtiva === "todos" || cartao.getAttribute("data-categoria") === categoriaAtiva;
+      var mostra = termo === "" || cartao.getAttribute("data-codigo").indexOf(termo) !== -1;
       cartao.style.display = mostra ? "flex" : "none";
       if (mostra) algumVisivel = true;
     });
-    tabs.style.display = buscando ? "none" : "flex";
-    semResultado.style.display = buscando && !algumVisivel ? "block" : "none";
-    tabs.querySelectorAll(".tab").forEach(function (tab) {
-      tab.classList.toggle("tab-ativa", tab.getAttribute("data-categoria") === categoriaAtiva);
-    });
+    semResultado.style.display = termo !== "" && !algumVisivel ? "block" : "none";
   }
 
-  tabs.querySelectorAll(".tab").forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      categoriaAtiva = tab.getAttribute("data-categoria");
-      campo.value = "";
-      aplicarFiltro();
-    });
-  });
   campo.addEventListener("input", aplicarFiltro);
-  aplicarFiltro();
 </script>
 </body>
 </html>
