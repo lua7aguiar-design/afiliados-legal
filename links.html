@@ -35,6 +35,14 @@
     color: #C77FE0; pointer-events: none; display: flex;
   }
   .vazio { text-align: center; color: #F7EAFF; font-size: 0.85rem; margin: 1rem 0; }
+  .paginacao { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 1.4rem 0 0; }
+  .pag-btn {
+    padding: 0.5rem 1.1rem; border-radius: 999px; border: none; background: #FFFFFF; color: #E056C9;
+    font-family: inherit; font-weight: 700; font-size: 0.8rem; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(60, 30, 20, 0.08);
+  }
+  .pag-btn:disabled { opacity: 0.4; cursor: default; box-shadow: none; }
+  .pag-info { color: #F7EAFF; font-weight: 600; font-size: 0.8rem; }
   nav { display: flex; flex-direction: column; gap: 0.9rem; }
   nav a.card {
     display: flex; align-items: center; gap: 0.9rem; padding: 0.7rem; border-radius: 20px;
@@ -69,6 +77,7 @@
 </div>
 
 <nav id="produtos">
+  <a class="card" href="https://s.shopee.com.br/7fZh5RMAV3" target="_blank" rel="noopener sponsored" data-codigo="553"><img src="https://cf.shopee.com.br/file/br-11134201-820lk-mr0wpk5f89adf4" alt=""><span class="info"><span class="nome">Espelho Lopazzi Grande Corpo Inteiro Decorativo Polido Moderno 90x40cm Quarto Sala Banheiro</span><span class="preco">R$ 78,89 &middot; cód. 553</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/60RT6NSVsd" target="_blank" rel="noopener sponsored" data-codigo="556"><img src="https://cf.shopee.com.br/file/br-11134207-81z1k-mgibn8pdyio589" alt=""><span class="info"><span class="nome">Espelho Decorativos Couro 100cm x 35cm Quart Salão Hall Sala</span><span class="preco">R$ 93,00 &middot; cód. 556</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/9Khv4VBUa2" target="_blank" rel="noopener sponsored" data-codigo="560"><img src="https://cf.shopee.com.br/file/br-11134207-820ln-mnnapcvelkao6f" alt=""><span class="info"><span class="nome">Cortina Blackout 3 Metros Modelo para Trilho Suíço Ideal para Quarto Sala Escritório Veda Luz</span><span class="preco">R$ 145,50 &middot; cód. 560</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/7Kwqgm6ueY" target="_blank" rel="noopener sponsored" data-codigo="557"><img src="https://cf.shopee.com.br/file/br-11134207-820m4-msab125lh6h0a3" alt=""><span class="info"><span class="nome">Kit 10 Toalhas de Rosto Bela Grandes 100% Algodão Macias Absorventes Conforto para Dia a Dia</span><span class="preco">R$ 66,31 &middot; cód. 557</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
@@ -80,29 +89,71 @@
   <a class="card" href="https://s.shopee.com.br/7fZeP5QUKf" target="_blank" rel="noopener sponsored" data-codigo="513"><img src="https://cf.shopee.com.br/file/sg-11134201-7rdxo-lygwpw9m8mx20d" alt=""><span class="info"><span class="nome">Kit Banheiro Lavabo Pia Porta Sabonete Líquido Porta Escova Dente Porta Algodão Organização Elegante</span><span class="preco">R$ 27,99 &middot; cód. 513</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/2gAzmboblp" target="_blank" rel="noopener sponsored" data-codigo="509"><img src="https://cf.shopee.com.br/file/br-11134207-820mf-mnram0snjtogaa" alt=""><span class="info"><span class="nome">Nicho Porta Tempero com Gancho Para Cozinha Prateleira(13)</span><span class="preco">R$ 99,99 &middot; cód. 509</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
   <a class="card" href="https://s.shopee.com.br/3B7F2ppjrE" target="_blank" rel="noopener sponsored" data-codigo="520"><img src="https://cf.shopee.com.br/file/br-11134207-820m3-mmvz422rexhc0e" alt=""><span class="info"><span class="nome">Espelho Orgânico Retangular 53x110cm Grande Moderno Decorativo Para Parede Sala Quarto Banheiro</span><span class="preco">R$ 160,00 &middot; cód. 520</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
-  <a class="card" href="https://s.shopee.com.br/Ln3fSvu4B" target="_blank" rel="noopener sponsored" data-codigo="526"><img src="https://cf.shopee.com.br/file/br-11134207-7r98o-m9rfonm0u6maa0" alt=""><span class="info"><span class="nome">Omeleteira Agratto Mr Cheff Inox Redonda 127v / 220v</span><span class="preco">R$ 90,06 &middot; cód. 526</span></span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></a>
 </nav>
+<div class="paginacao" id="paginacao">
+  <button class="pag-btn" id="pag-anterior" type="button">Anterior</button>
+  <span class="pag-info" id="pag-info"></span>
+  <button class="pag-btn" id="pag-proxima" type="button">Próxima</button>
+</div>
 <p class="vazio" id="sem-resultado" style="display: none;">Nenhum produto encontrado com esse código.</p>
 
 <footer>Achadinhos da Shopee</footer>
 
 <script>
+  var POR_PAGINA = 4;
+  var paginaAtual = 1;
+
   var campo = document.getElementById("busca");
   var cartoes = document.querySelectorAll("#produtos a[data-codigo]");
   var semResultado = document.getElementById("sem-resultado");
+  var paginacao = document.getElementById("paginacao");
+  var botaoAnterior = document.getElementById("pag-anterior");
+  var botaoProxima = document.getElementById("pag-proxima");
+  var infoPagina = document.getElementById("pag-info");
+
+  // Só pagina a lista completa (sem busca ativa) — com busca, cada código já filtra pra
+  // 0 ou 1 produto, então não faz sentido paginar em cima de um resultado filtrado.
+  function renderizarPagina() {
+    var totalPaginas = Math.ceil(cartoes.length / POR_PAGINA);
+    if (totalPaginas <= 1) {
+      paginacao.style.display = "none";
+      cartoes.forEach(function (cartao) { cartao.style.display = "flex"; });
+      return;
+    }
+    if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
+    var inicio = (paginaAtual - 1) * POR_PAGINA;
+    var fim = inicio + POR_PAGINA;
+    cartoes.forEach(function (cartao, indice) {
+      cartao.style.display = indice >= inicio && indice < fim ? "flex" : "none";
+    });
+    paginacao.style.display = "flex";
+    infoPagina.textContent = paginaAtual + " de " + totalPaginas;
+    botaoAnterior.disabled = paginaAtual <= 1;
+    botaoProxima.disabled = paginaAtual >= totalPaginas;
+  }
 
   function aplicarFiltro() {
     var termo = campo.value.trim();
+    if (termo === "") {
+      semResultado.style.display = "none";
+      renderizarPagina();
+      return;
+    }
+    paginacao.style.display = "none";
     var algumVisivel = false;
     cartoes.forEach(function (cartao) {
-      var mostra = termo === "" || cartao.getAttribute("data-codigo").indexOf(termo) !== -1;
+      var mostra = cartao.getAttribute("data-codigo").indexOf(termo) !== -1;
       cartao.style.display = mostra ? "flex" : "none";
       if (mostra) algumVisivel = true;
     });
-    semResultado.style.display = termo !== "" && !algumVisivel ? "block" : "none";
+    semResultado.style.display = !algumVisivel ? "block" : "none";
   }
 
   campo.addEventListener("input", aplicarFiltro);
+  botaoAnterior.addEventListener("click", function () { paginaAtual--; renderizarPagina(); });
+  botaoProxima.addEventListener("click", function () { paginaAtual++; renderizarPagina(); });
+
+  renderizarPagina();
 </script>
 </body>
 </html>
