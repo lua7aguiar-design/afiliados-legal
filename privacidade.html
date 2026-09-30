@@ -132,15 +132,16 @@
 </head>
 <body>
 
-<p class="eyebrow"><span class="dot"></span>Documento legal · single-tenant</p>
+<p class="eyebrow"><span class="dot"></span>Documento legal · uso interno</p>
 <h1>Política de Privacidade</h1>
-<p class="meta">Plataforma de Automação para Afiliados — atualizado em 1 set 2026</p>
+<p class="meta">Plataforma de Automação para Afiliados — atualizado em 30 set 2026</p>
 
 <section>
-  <p>Esta Plataforma é uma ferramenta pessoal de automação de marketing de afiliados,
-  operada por um único usuário (single-tenant). Esta política descreve quais dados são
-  tratados quando você conecta sua conta do Facebook (Página), Instagram, Pinterest ou um
-  canal do Telegram.</p>
+  <p>Esta Plataforma é uma ferramenta interna de automação de marketing de afiliados, usada
+  apenas pelos seus dois operadores para divulgar produtos nas próprias contas. Não é
+  oferecida ao público e não tem cadastro aberto. Esta política descreve quais dados são
+  tratados quando uma conta do Facebook (Página), do Instagram, do Pinterest ou um canal do
+  Telegram é conectado à Plataforma.</p>
 </section>
 
 <section>
@@ -148,82 +149,115 @@
   <div class="tablewrap">
     <table>
       <thead>
-        <tr><th>Escopo</th><th>Dado</th><th>Uso</th></tr>
+        <tr><th>Permissão</th><th>Dado</th><th>Uso</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><code>pages_show_list</code>, <code>pages_read_engagement</code></td>
-          <td>Lista de Páginas administradas, nome da Página</td>
-          <td>Exibir no painel qual Página está vinculada</td>
+          <td>Facebook — <code>pages_show_list</code>, <code>business_management</code></td>
+          <td>Lista das Páginas que a conta administra, com nome e ID de cada uma</td>
+          <td>Escolher qual Página conectar. <code>business_management</code> é necessário
+          porque as Páginas foram criadas dentro de um Portfólio Empresarial da Meta; nenhum
+          outro dado do portfólio é lido ou alterado</td>
         </tr>
         <tr>
-          <td><code>pages_manage_posts</code></td>
-          <td>Nenhum dado é lido</td>
-          <td>Publicar posts (foto + legenda) em nome da Página, após aprovação manual</td>
+          <td>Facebook — <code>pages_manage_posts</code></td>
+          <td>Nenhum dado de terceiros é lido</td>
+          <td>Criar, agendar, editar e apagar posts (foto + legenda) na Página conectada, sempre
+          a partir de uma publicação aprovada manualmente</td>
         </tr>
         <tr>
-          <td><code>instagram_basic</code></td>
-          <td>Nome de usuário e ID da conta comercial do Instagram vinculada à Página</td>
-          <td>Exibir no painel qual conta do Instagram está vinculada</td>
+          <td>Facebook — <code>pages_read_engagement</code></td>
+          <td>Link público e texto dos posts criados pela própria Plataforma</td>
+          <td>Guardar o link de cada post publicado e conferir se uma edição foi aplicada</td>
         </tr>
         <tr>
-          <td><code>instagram_content_publish</code></td>
-          <td>Nenhum dado é lido</td>
-          <td>Publicar posts (foto + legenda) na conta do Instagram vinculada, após aprovação manual</td>
+          <td>Instagram — <code>instagram_business_basic</code></td>
+          <td>Nome de usuário e ID da conta profissional do Instagram conectada</td>
+          <td>Exibir no painel qual conta está conectada</td>
         </tr>
         <tr>
-          <td>Pinterest — <code>boards:read</code>, <code>pins:write</code></td>
-          <td>Lista de boards, nome do board</td>
-          <td>Publicar pins (imagem + legenda) no board conectado, após aprovação manual</td>
+          <td>Instagram — <code>instagram_business_content_publish</code></td>
+          <td>Link público dos posts criados pela própria Plataforma</td>
+          <td>Publicar posts (foto(s) + legenda) na conta conectada, a partir de uma publicação
+          aprovada manualmente</td>
         </tr>
         <tr>
-          <td>Telegram Bot API</td>
-          <td>Nome/id do canal conectado</td>
-          <td>Publicar posts (foto(s) + legenda) no canal, após aprovação manual — o token do
-          bot é gerado e colado manualmente pelo operador (@BotFather), sem fluxo OAuth</td>
+          <td>Pinterest — <code>boards:read</code>, <code>boards:write</code>, <code>pins:read</code>, <code>pins:write</code></td>
+          <td>Lista de boards da conta, com nome e ID</td>
+          <td>Escolher o board e criar pins (imagem + título + descrição + link) nele, a partir
+          de uma publicação aprovada manualmente. <code>boards:write</code> é exigido pela
+          Pinterest para criar pins dentro de um board</td>
+        </tr>
+        <tr>
+          <td>Telegram — Bot API</td>
+          <td>Nome e ID do canal conectado</td>
+          <td>Publicar posts (foto(s) + legenda) no canal, a partir de uma publicação aprovada
+          manualmente. O token do bot é criado e informado manualmente pelos operadores
+          (@BotFather), sem fluxo OAuth</td>
         </tr>
         <tr>
           <td>—</td>
-          <td>Access / refresh token (ou token do bot, no caso do Telegram)</td>
-          <td>Armazenados criptografados, usados só para autenticar as publicações</td>
+          <td>Tokens de acesso e de renovação (ou o token do bot, no Telegram) e a data de
+          validade de cada um</td>
+          <td>Guardados criptografados e usados só para autenticar as ações acima. Tokens com
+          validade (Instagram e Pinterest) são renovados automaticamente antes de vencer</td>
+        </tr>
+        <tr>
+          <td>Shopee — API de afiliados</td>
+          <td>Produtos do programa de afiliados e relatório de conversões (ID do pedido, itens,
+          status e comissão). Nenhum dado pessoal de comprador é recebido ou guardado</td>
+          <td>Escolher produtos para divulgar, gerar links de afiliado e acompanhar as comissões</td>
+        </tr>
+        <tr>
+          <td>Operadores</td>
+          <td>Nome, e-mail e senha (guardada só como hash) dos dois operadores</td>
+          <td>Login no painel da Plataforma</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <p>A Plataforma não lê perfis, seguidores, mensagens, comentários ou qualquer dado de outras
+  pessoas nas redes conectadas.</p>
 </section>
 
 <section>
   <h2><span class="num">02</span>Como os dados são usados</h2>
-  <p>Os dados acima são usados exclusivamente para permitir a publicação de posts (foto +
-  legenda) de divulgação de produtos de afiliados nas contas conectadas do próprio operador.
-  Não usamos os dados para anúncios, perfilamento, revenda ou qualquer finalidade além da
-  operação da própria Plataforma.</p>
+  <p>Os dados acima são usados exclusivamente para publicar posts de divulgação de produtos
+  de afiliados nas contas dos próprios operadores. Toda publicação passa por aprovação
+  manual no painel; depois de aprovada, ela é publicada automaticamente no horário agendado.
+  Um post ainda agendado pode ser ajustado ou apagado automaticamente pela Plataforma (por
+  exemplo, quando o produto sai do ar na Shopee ou para atualizar o link de afiliado). Não
+  usamos os dados para anúncios, perfilamento, revenda ou qualquer outra finalidade.</p>
 </section>
 
 <section>
   <h2><span class="num">03</span>Compartilhamento com terceiros</h2>
-  <p>Não compartilhamos, vendemos ou cedemos dados a terceiros. Os dados trafegam apenas
-  entre a Plataforma e as APIs oficiais do Facebook, do Instagram, do Pinterest, do Telegram
-  e da Shopee, estritamente para executar as ações solicitadas pelo operador (publicar post,
-  ler produtos de afiliado).</p>
+  <p>Não compartilhamos, vendemos ou cedemos dados a terceiros. Os dados trafegam apenas entre
+  a Plataforma, as APIs oficiais do Facebook, do Instagram, do Pinterest, do Telegram e da
+  Shopee, e os provedores de infraestrutura descritos abaixo, estritamente para executar as
+  ações pedidas pelos operadores.</p>
 </section>
 
 <section>
   <h2><span class="num">04</span>Armazenamento e segurança</h2>
-  <p>Tokens de acesso são armazenados criptografados. A Plataforma roda localmente
-  (infraestrutura própria do operador via Docker), sem exposição de banco de dados a redes
-  públicas.</p>
+  <p>A Plataforma roda nos computadores dos operadores (via Docker) e guarda seus dados num
+  banco PostgreSQL gerenciado pelo Supabase, com acesso restrito por senha. Tokens de acesso
+  são guardados criptografados. O painel exige login, e a comunicação com a Plataforma é
+  feita só por HTTPS.</p>
+  <p>As fotos dos produtos divulgados e a página pública de links dos produtos ficam
+  hospedadas no GitHub Pages. Essa hospedagem contém apenas fotos e links de produtos, nenhum
+  dado pessoal.</p>
 </section>
 
 <section id="exclusao">
   <h2><span class="num">05</span>Retenção e exclusão de dados</h2>
-  <p>Você pode revogar o acesso da Plataforma à sua conta do Facebook, Instagram, Pinterest ou
-  ao canal do Telegram a qualquer momento nas configurações de apps conectados de cada rede
-  (no Telegram, removendo o bot como admin do canal), ou desconectando a integração dentro do
-  painel da Plataforma — isso invalida e remove os tokens armazenados.
-  Para solicitar a exclusão completa de qualquer dado retido (tokens, nome da Página/conta
-  vinculada), envie um e-mail para o contato ao final desta página; a exclusão é feita em até
-  7 dias.</p>
+  <p>Os tokens ficam guardados enquanto a conta estiver conectada. Desconectar a integração no
+  painel da Plataforma apaga os tokens guardados. Para revogar o acesso também na própria
+  rede, use as configurações de apps conectados do Facebook, do Instagram ou do Pinterest (no
+  Telegram, remova o bot do canal).</p>
+  <p>Para pedir a exclusão completa de qualquer dado retido (tokens, nome e ID da Página,
+  conta, board ou canal, e o histórico de posts publicados), envie um e-mail para o contato no
+  fim desta página. A exclusão é feita em até 7 dias.</p>
 </section>
 
 <footer>
